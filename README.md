@@ -6,6 +6,8 @@ The macOS counterpart to [ahk-mcp](https://github.com/anomalous3/ahk-mcp). Same 
 
 Token cost per action: **~200-700 tokens** (vs ~2000-3500 for screenshot-based).
 
+Because the output is structured text, not images, **any language model can drive it** — including small open-source models with no vision capability. A 7B model can parse `AXButton title="Save" @450,320 88x32` and call `mac_click(x=490, y=336)`. It cannot interpret a screenshot. The accessibility approach makes computer use available to models that were previously locked out of it entirely.
+
 ## How it works
 
 macbot-mcp exposes 14 tools over MCP's stdio transport:
